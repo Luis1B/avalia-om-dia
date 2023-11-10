@@ -12,6 +12,5 @@ while(contador < listaDeTeclas.length){
 
     }
     contador = contador +1;
-    con
-    sole.log(contador);
+    console.log(contador);
 }
