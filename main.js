@@ -3,7 +3,21 @@ function tocasom(idElementoAudio){
 }
 const listaDeTeclas = document.querySelectorAll(".tecla");
 
-let contador = 0;
+for(let contador = 0; contador < listaDeTeclas.length; contador++){
+    const tecla = listaDeTeclas[contador];
+    const efeito = tecla.classList[1]
+    const idAudio = `#som_${efeito}`;
+
+    tecla.onclick = function(){
+        tocasom(idAudio);
+    
+    }
+    tecla.onkeydown = function(evento){
+        if(evento.code != 'Tab'){
+            tecla.classList.add('ativa')
+        }
+    }
+
 while(contador < listaDeTeclas.length){
 const efeito = listaDeTeclas[contador].classList[1]
 const idAudio = "#som_"+efeito;
