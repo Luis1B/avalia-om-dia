@@ -17,14 +17,8 @@ for(let contador = 0; contador < listaDeTeclas.length; contador++){
             tecla.classList.add('ativa')
         }
     }
-
-while(contador < listaDeTeclas.length){
-const efeito = listaDeTeclas[contador].classList[1]
-const idAudio = "#som_"+efeito;
-listaDeTeclas[contador].onclick = function(){
-    tocasom(idAudio)
-
+    tecla.onkeyup = function(){
+        tecla.classList.remove('ativa')
+    }
 }
-    contador = contador +1;
-    console.log(contador);
-}
+
